@@ -19,11 +19,10 @@
     "128": "icon.png"
   },
   "content_scripts": [
-  {
-    "matches": ["https://172.22.2.6/*"],
-    "js": ["content.js"],
-    "run_at": "document_idle"
-  }
-]
-
+    {
+      "matches": ["https://172.22.2.6/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
 }
