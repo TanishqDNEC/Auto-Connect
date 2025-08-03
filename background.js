@@ -1,7 +1,7 @@
-chrome.webNavigation.onCompleted.addListener(function (details) {
-  if (details.frameId === 0 && details.url.includes("172.22.2.6")) {
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status === "complete" && tab.url && tab.url.includes("172.22.2.6")) {
     chrome.scripting.executeScript({
-      target: { tabId: details.tabId },
+      target: { tabId },
       files: ["content.js"]
     });
   }
