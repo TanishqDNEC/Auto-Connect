@@ -1,0 +1,162 @@
+:root {
+    --bg-color: #0f0f0f;
+    --text-color: #ffffff;
+    --input-bg: #1e1e1e;
+    --accent: #4e9af1;
+    --accent-hover: #3b7cd5;
+    --error-color: #ff6b6b;
+    --success-color: #7dd87d;
+}
+
+body.light {
+    --bg-color: #f8f8f8;
+    --text-color: #121212;
+    --input-bg: #ffffff;
+    --accent: #2a73c0;
+    --accent-hover: #205ca1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    min-height: 220px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease-in-out;
+}
+
+body.light {
+    background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+    color: #000;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--accent);
+}
+
+input {
+    width: 90%;
+    padding: 14px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    box-shadow: 0 0 0 1px var(--accent);
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+
+input:focus {
+    box-shadow: 0 0 0 2px var(--accent-hover);
+}
+
+button {
+    padding: 10px 16px;
+    margin: 8px;
+    border: none;
+    border-radius: 12px;
+    background-color: #5f5b8c;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background-color: #7a75c4;
+}
+
+input {
+    padding: 10px;
+    margin: 8px;
+    width: 80%;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+#status {
+    margin: 8px 0;
+    font-size: 0.9rem;
+    color: var(--success-color);
+}
+
+/* Toggle Switch */
+.theme-toggle {
+    text-align: right;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #888;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: var(--accent);
+}
+
+input:checked+.slider:before {
+    transform: translateX(20px);
+}
+#status {
+    margin: 8px 0;
+    font-size: 0.9rem;
+    color: var(--success-color);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+#status.hidden {
+    opacity: 0;
+}

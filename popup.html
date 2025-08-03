@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Auto Connect</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Auto Connect</h1>
+        <div class="theme-toggle">
+            <label class="switch">
+                <input type="checkbox" id="themeSwitcher" />
+                <span class="slider round"></span>
+            </label>
+            <span id="themeLabel">🌙 Dark</span>
+        </div>
+
+
+        <div id="form">
+            <input type="text" id="username" placeholder="Username" />
+            <input type="password" id="password" placeholder="Password" />
+            <button id="save">Save</button>
+        </div>
+
+        <div id="options" style="display: none;">
+            <div id="toast" class="toast hidden">✔️ Saved</div>
+            <style>
+                .toast {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    background-color: #4BB543;
+                    color: white;
+                    padding: 10px 18px;
+                    border-radius: 12px;
+                    font-weight: 600;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                    transition: opacity 0.3s ease;
+                    z-index: 9999;
+                }
+            
+                .hidden {
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            
+                .show {
+                    opacity: 1;
+                }
+            </style>
+
+
+            <button id="connect">Connect</button>
+            <button id="change">Change Details</button>
+        </div>
+    </div>
+    <div id="toast" class="hidden">Credentials saved</div>
+
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
